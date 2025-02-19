@@ -6,17 +6,24 @@ int main() {
 	int num;
 	printf("\nEnter No. ");
 	scanf_s("%d", &num);
+	int isPrime = 1;
+	if (num < 2) {
+		printf("\nNot Prime\n");
+		return 0;
+	}
+	for (int i = 2; i*i <= num; i++) {
+		if (num % i == 0) {
+			isPrime = 0;
+			break;
+		}
+	}
 
-	if (num == 2) {
+	if (isPrime) {
 		printf("\nPrime No\n");
 	}
-	for (int i = 2; i < num; i++) {
-		if (num % i == 0) {
-			printf("\nNot Prime\n");
-		}
-		else {
-			printf("\nPrime\n");
-		}
+	else {
+		printf("\nNot Prime\n");
 	}
+
 	return 0;
 }
