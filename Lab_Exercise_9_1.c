@@ -3,6 +3,7 @@
 //10 characters.
 
 #include<stdio.h>
+//#include<conio.h>
 /*
 int main() {
 	int userAns=1;
@@ -51,8 +52,6 @@ int main() {
 			iUpdate += 10;
 		}
 		
-		
-
 	} while (count <= 255);
 
 	return 0;

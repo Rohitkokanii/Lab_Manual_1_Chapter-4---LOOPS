@@ -6,29 +6,36 @@
 int main() {
 	int num;
 	
-	int count = 0;
-	int lastDigit;
-	int mult = 1;
-	int armSum = 0;
+	
 	printf("\nEnter No. = ");
 	scanf_s("%d", &num);
+	int a = num;
 	int orgNum = num;
+	int count = 0;
+	int lastDigit;
+	int armSum = 0;
 
 	while (num > 0) {
-		num /= 10;
 		count++;
+		num /= 10;
 	}
 
 	for (int i = 1; i <= count; i++) {
-		lastDigit = orgNum % 10;
-		printf(" %d ",lastDigit);
-		/*for (int j = 1; j <= count; j++) {
+		lastDigit = a % 10;
+		int mult = 1;
+		for (int j = 1; j <= count; j++) {
 			mult = mult * lastDigit;
 		}
-		armSum = armSum + mult;*/
+		armSum = armSum + mult;
+		a /= 10;
 	}
-
-	printf("\nArmstrong No. = %d \n",armSum);
+	if (armSum == orgNum) {
+		printf("\nArmstrong No. = %d \n", armSum);
+	}
+	else {
+		printf("\nNot Armstrong\n");
+	}
+	
 
 	return 0;
 }
