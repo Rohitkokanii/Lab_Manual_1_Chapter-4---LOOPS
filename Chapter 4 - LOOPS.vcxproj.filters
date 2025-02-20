@@ -24,5 +24,11 @@
     <ClCompile Include="Lab_Exercise_10.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lab_Exercise_11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab_Exercise_12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
